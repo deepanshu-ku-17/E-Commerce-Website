@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleMart - Your Fashion Destination</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">StyleMart</a></h1>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#men">MEN</a>
+                        <div class="dropdown-content">
+                            <a href="#men-tshirts">T-SHIRTS</a>
+                            <a href="#men-shirts">SHIRTS</a>
+                            <a href="#men-jeans">JEANS</a>
+                            <a href="#men-shoes">SHOES</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#women">WOMEN</a>
+                        <div class="dropdown-content">
+                            <a href="#women-dresses">DRESSES</a>
+                            <a href="#women-tops">TOPS</a>
+                            <a href="#women-skirts">SKIRTS</a>
+                            <a href="#women-shoes">SHOES</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#kids">KIDS</a>
+                        <div class="dropdown-content">
+                            <a href="#kids-clothing">CLOTHING</a>
+                            <a href="#kids-shoes">SHOES</a>
+                            <a href="#kids-accessories">ACCESSORIES</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#home-living">HOME & LIVING</a>
+                        <div class="dropdown-content">
+                            <a href="#bedding">BEDDING</a>
+                            <a href="#furniture">FURNITURE</a>
+                            <a href="#decor">DECOR</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#beauty">BEAUTY</a>
+                        <div class="dropdown-content">
+                            <a href="#makeup">MAKEUP</a>
+                            <a href="#skincare">SKINCARE</a>
+                            <a href="#haircare">HAIRCARE</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Search for products, brands and more">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="user-actions">
+                <a href="profile.html" class="icon-link"><i class="fas fa-user"></i>PROFILE</a>
+                <a href="wishlist.html" class="icon-link"><i class="fas fa-heart"></i>WISHLIST</a>
+                <a href="cart.html" class="icon-link cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    BAG
+                    <span id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h2>Elevate Your Style</h2>
+                <p>Discover the latest trends in fashion at unbeatable prices</p>
+                <a href="#products" class="cta-button">Shop Now</a>
+                <a href="#about" class="secondary-button">Learn More</a>
+            </div>
+        </section>
+
+        <section id="products" class="container">
+            <h2>Our Products</h2>
+            <div class="filter-container">
+                <select id="category-filter" onchange="filterProducts()">
+                    <option value="">All Categories</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="footwear">Footwear</option>
+                    <option value="accessories">Accessories</option>
+                </select>
+                <select id="sort-filter" onchange="sortProducts()">
+                    <option value="">Sort By</option>
+                    <option value="price-low-high">Price: Low to High</option>
+                    <option value="price-high-low">Price: High to Low</option>
+                </select>
+            </div>
+            <div id="product-list">
+                <!-- Products will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="about" class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="img/about.jpg" alt="StyleMart Team" class="about-image">
+                <div class="about-text">
+                    <p>StyleMart is your one-stop destination for the latest fashion trends. We offer a wide range of high-quality clothing, footwear, and accessories for all your style needs.</p>
+                    <p>Our mission is to make fashion accessible and enjoyable for everyone. With carefully curated collections and exceptional customer service, we strive to enhance your shopping experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-content">
+                <form id="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, Style City, 12345</p>
+                    <p><i class="fas fa-phone"></i> +91 123 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@stylemart.com</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StyleMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

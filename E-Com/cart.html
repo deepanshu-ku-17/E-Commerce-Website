@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - StyleMart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">StyleMart</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#products">PRODUCTS</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                    <li><a href="wishlist.html">WISHLIST</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            BAG
+                            <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <div class="progress-bar">
+            <span class="active">BAG</span>
+            <span>ADDRESS</span>
+            <span>PAYMENT</span>
+        </div>
+
+        <section class="cart-section">
+            <div class="cart-details">
+                <h2>Deliver to:</h2>
+                <p id="delivery-address">Your Address Here</p>
+                <button id="change-address">CHANGE ADDRESS</button>
+
+                <h2>Available Offers</h2>
+                <ul id="available-offers">
+                    <!-- Offers will be dynamically added here -->
+                </ul>
+
+                <div id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+
+                <button id="add-from-wishlist">Add More From Wishlist</button>
+            </div>
+
+            <div class="price-summary">
+                <h2>PRICE DETAILS</h2>
+                <div id="price-breakdown">
+                    <!-- Price breakdown will be dynamically added here -->
+                </div>
+                <button id="place-order">PLACE ORDER</button>
+            </div>
+        </section>
+
+        <!-- Add this just before the closing </main> tag in cart.html -->
+<section class="recommendations">
+    <!-- Recommended products will be dynamically added here -->
+</section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StyleMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

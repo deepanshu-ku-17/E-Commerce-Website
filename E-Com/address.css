@@ -1,0 +1,168 @@
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.progress-bar span {
+    margin: 0 1rem;
+    color: #888;
+    font-weight: bold;
+}
+
+.progress-bar span.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+.address-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.address-list {
+    flex: 2;
+}
+
+.order-summary {
+    flex: 1;
+}
+
+.btn-primary {
+    background-color: #ff3f6c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.address-item {
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.address-type {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    font-size: 0.8em;
+    margin-bottom: 5px;
+}
+
+.address-actions {
+    margin-top: 10px;
+}
+
+.delivery-estimate {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.delivery-estimate img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+#price-breakdown div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 4px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#new-address-form input,
+#new-address-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.city-state {
+    display: flex;
+    gap: 10px;
+}
+
+.city-state input {
+    flex: 1;
+}
+
+.address-type {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.address-type-btn {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.address-type-btn.active {
+    background-color: #ff3f6c;
+    color: #fff;
+    border-color: #ff3f6c;
+}
+
+.btn-primary {
+    background-color: #ff3f6c;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+}

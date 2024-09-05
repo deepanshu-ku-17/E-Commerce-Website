@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - StyleMart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Your header content -->
+    </header>
+
+    <main class="container">
+        <section id="customer-details" class="checkout-section">
+            <h2>Customer Details</h2>
+            <form id="customer-form">
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+                <textarea id="address" name="address" placeholder="Delivery Address" required></textarea>
+                <button type="submit">Proceed to Payment</button>
+            </form>
+        </section>
+
+        <section id="payment-options" class="checkout-section" style="display: none;">
+            <h2>Payment Options</h2>
+            <form id="payment-form">
+                <div class="payment-option">
+                    <input type="radio" id="credit-card" name="payment" value="credit-card" required>
+                    <label for="credit-card">Credit Card</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="debit-card" name="payment" value="debit-card">
+                    <label for="debit-card">Debit Card</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="net-banking" name="payment" value="net-banking">
+                    <label for="net-banking">Net Banking</label>
+                </div>
+                <div class="payment-option">
+                    <input type="radio" id="upi" name="payment" value="upi">
+                    <label for="upi">UPI</label>
+                </div>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Your footer content -->
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

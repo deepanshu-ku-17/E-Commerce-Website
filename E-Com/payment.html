@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - StyleMart</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">StyleMart</div>
+            <ul class="progress-bar">
+                <li>BAG</li>
+                <li>ADDRESS</li>
+                <li class="active">PAYMENT</li>
+            </ul>
+            <div class="secure-badge">100% SECURE</div>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="payment-container">
+            <div class="payment-options">
+                <div class="bank-offer">
+                    <h3>Bank Offer</h3>
+                    <p>10% Instant Discount on Kotak Credit and Debit Cards on a min spend of ₹3500. TCA</p>
+                    <a href="#" class="show-more">Show More</a>
+                </div>
+                
+                <h2>Choose Payment Mode</h2>
+                
+                <div class="recommended">
+                    <span class="recommended-label">Recommended</span>
+                    <h3>Recommended Payment Options</h3>
+                </div>
+                
+                <ul class="payment-methods">
+                    <li class="payment-method">Cash On Delivery</li>
+                    <li class="payment-method">UPI (Pay via any App)</li>
+                    <li class="payment-method">Credit/Debit Card <span class="offer-tag">5 Offers</span></li>
+                    <li class="payment-method">Wallets <span class="offer-tag">5 Offers</span></li>
+                    <li class="payment-method">Pay Later</li>
+                    <li class="payment-method">EMI</li>
+                    <li class="payment-method">Net Banking</li>
+                </ul>
+                
+                <div class="gift-card">
+                    <h3>Have a Gift Card?</h3>
+                    <button id="apply-gift-card">APPLY GIFT CARD</button>
+                </div>
+            </div>
+            
+            <div class="price-summary">
+                <h2>PRICE DETAILS</h2>
+                <div class="price-row">
+                    <span>Total MRP</span>
+                    <span id="total-mrp">₹0.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Discount on MRP</span>
+                    <span id="discount-mrp" class="discount">-₹0.00</span>
+                </div>
+                <div class="price-row">
+                    <span>Platform Fee</span>
+                    <span id="platform-fee">₹0.00</span>
+                </div>
+                <div class="price-row total">
+                    <span>Total Amount</span>
+                    <span id="total-amount">₹0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Forms -->
+        <div id="cash-on-delivery-form" class="payment-form" style="display:none;">
+            <h3>Cash On Delivery</h3>
+            <p>You will pay ₹404 in cash at the time of delivery.</p>
+            <button onclick="confirmPayment('Cash On Delivery')">Place Order</button>
+        </div>
+
+        <div id="upi-form" class="payment-form" style="display:none;">
+            <h3>UPI Payment</h3>
+            <input type="text" placeholder="Enter UPI ID">
+            <button onclick="confirmPayment('UPI')">Pay ₹404</button>
+        </div>
+
+        <div id="credit-debit-card-form" class="payment-form" style="display:none;">
+            <h3>Credit/Debit Card Payment</h3>
+            <input type="text" placeholder="Card Number">
+            <input type="text" placeholder="MM/YY">
+            <input type="text" placeholder="CVV">
+            <button onclick="confirmPayment('Credit/Debit Card')">Pay ₹404</button>
+        </div>
+    </main>
+
+    <div id="orderConfirmation" class="modal">
+        <div class="modal-content">
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for your purchase.</p>
+            <button id="continueToHome">Continue Shopping</button>
+        </div>
+    </div>
+    
+    <script>
+        console.log('Cart Details from localStorage:', JSON.parse(localStorage.getItem('cartDetails')));
+    </script>
+    
+    <script src="payment.js"></script>
+</body>
+</html>

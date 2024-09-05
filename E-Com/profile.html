@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile - StyleMart</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="profile.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+    
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">StyleMart</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#products">PRODUCTS</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                    <li><a href="wishlist.html">WISHLIST</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>BAG</span>
+                            <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="profile-section">
+            <h2>My Profile</h2>
+            <div id="profile-info">
+                <!-- Profile information will be dynamically added here -->
+            </div>
+            <button id="edit-profile-btn">Edit Profile</button>
+        </section>
+
+        <section id="edit-profile-form" style="display: none;">
+            <h2>Edit Profile</h2>
+            <form id="profile-form">
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                <input type="text" id="address" name="address" placeholder="Address">
+                <button type="submit">Save Changes</button>
+                <button type="button" id="cancel-edit">Cancel</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StyleMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

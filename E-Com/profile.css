@@ -1,0 +1,104 @@
+/* profile.css */
+
+.profile-section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#profile-info p {
+    margin-bottom: 0.5rem;
+}
+
+#edit-profile-btn, #profile-form button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+#edit-profile-btn:hover, #profile-form button:hover {
+    background-color: #e63b5e;
+}
+
+#edit-profile-form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#profile-form {
+    display: grid;
+    gap: 1rem;
+}
+
+#profile-form input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#cancel-edit {
+    background-color: #ccc;
+}
+
+#cancel-edit:hover {
+    background-color: #bbb;
+}
+/* Styles for the bag button */
+.cart-icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    position: relative;
+}
+
+.cart-icon i {
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.cart-icon span {
+    font-size: 14px;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure consistent styling with other nav items */
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+

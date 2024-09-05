@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Address - StyleMart</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="address.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">StyleMart</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="index.html#products">PRODUCTS</a></li>
+                    <li><a href="profile.html">PROFILE</a></li>
+                    <li><a href="wishlist.html">WISHLIST</a></li>
+                    <li>
+                        <a href="cart.html" class="cart-icon">
+                            <i class="fas fa-shopping-bag"></i>
+                            BAG
+                            <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="progress-bar">
+            <span>BAG</span>
+            <span class="active">ADDRESS</span>
+            <span>PAYMENT</span>
+        </div>
+        <div class="address-container">
+            <div class="address-list">
+                <h2>Select Delivery Address</h2>
+                <button id="add-new-address" class="btn-primary">ADD NEW ADDRESS</button>
+                <div id="address-list">
+                    <!-- Addresses will be dynamically added here -->
+                </div>
+            </div>
+            <div class="order-summary">
+                <h3>DELIVERY ESTIMATES</h3>
+                <div class="delivery-estimate">
+                    <p>Estimated delivery by <span id="delivery-date"></span></p>
+                </div>
+                <h3>PRICE DETAILS</h3>
+                <div id="price-breakdown">
+                    <div><span>Total MRP</span><span id="total-mrp">₹0.00</span></div>
+                    <div><span>Discount on MRP</span><span id="discount-mrp">-₹0.00</span></div>
+                    <div><span>Platform Fee</span><span id="platform-fee">₹20.00</span></div>
+                    <div><span>Shipping Fee</span><span>FREE</span></div>
+                    <div><strong>Total Amount</strong><strong id="total-amount">₹20.00</strong></div>
+                </div>
+                <button id="continue-to-payment" class="btn-primary">CONTINUE</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 StyleMart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="address-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>ADD NEW ADDRESS</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="new-address-form">
+                <h3>CONTACT DETAILS</h3>
+                <input type="text" id="new-name" placeholder="Name*" required>
+                <input type="tel" id="new-phone" placeholder="Mobile No*" required>
+
+                <h3>ADDRESS</h3>
+                <input type="text" id="new-pincode" placeholder="Pin Code*" required>
+                <textarea id="new-address" placeholder="Address (House No, Building, Street, Area)*" required></textarea>
+                <input type="text" id="new-locality" placeholder="Locality / Town*" required>
+                <div class="city-state">
+                    <input type="text" id="new-city" placeholder="City / District*" required>
+                    <input type="text" id="new-state" placeholder="State*" required>
+                </div>
+
+                <h3>SAVE ADDRESS AS</h3>
+                <div class="address-type">
+                    <button type="button" class="address-type-btn active" data-type="Home">Home</button>
+                    <button type="button" class="address-type-btn" data-type="Work">Work</button>
+                </div>
+
+                <button type="submit" class="btn-primary">ADD ADDRESS</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+</body>
+</html>
